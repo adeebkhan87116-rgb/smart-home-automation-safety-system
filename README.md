@@ -85,6 +85,10 @@ home/{room}/mode/state
 - Data Logging
 - Device Health Monitoring
 
+- ## Dashboard
+
+![Dashboard](screenshots/dashboard-overview.png)
+
 ---
 
 ## Author
