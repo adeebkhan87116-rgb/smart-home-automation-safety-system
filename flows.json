@@ -1,0 +1,3183 @@
+[
+    {
+        "id": "dc9ca215cd90eaad",
+        "type": "tab",
+        "label": "Main Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f25ea2ab868fd1b0",
+        "type": "tab",
+        "label": "Bedroom Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "052f056e49ec61dc",
+        "type": "tab",
+        "label": "Kitchen dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "897a62519bd486fd",
+        "type": "tab",
+        "label": "Hall Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "85a0b1348ef627ca",
+        "type": "tab",
+        "label": "Chart",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a0a49ae47181068b",
+        "type": "mqtt-broker",
+        "name": "LocalMosquitto",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6c50459092488473",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "06ecc1bc68689f37",
+        "type": "ui_group",
+        "name": "Home_sensor",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "65c31eb25d073f66",
+        "type": "ui_group",
+        "name": "Environment monitor",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4418f4fd38918afe",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5f24e34ff43a1830",
+        "type": "mqtt-broker",
+        "name": "Local MQTT Broker",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "96653bc572b7361a",
+        "type": "ui_tab",
+        "name": "Smart Home",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fc9ea856ccc2fa3a",
+        "type": "ui_group",
+        "name": "Bedroom",
+        "tab": "96653bc572b7361a",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bef8ed6281a43985",
+        "type": "ui_group",
+        "name": "Kitchen",
+        "tab": "96653bc572b7361a",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1204efa4cd24bd46",
+        "type": "ui_group",
+        "name": "Hall",
+        "tab": "96653bc572b7361a",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7860cfd3dd5836ca",
+        "type": "ui_group",
+        "name": "Security",
+        "tab": "96653bc572b7361a",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "33dbabb1bd85f6b5",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "d121a520b21f0be5",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "4daf4c9ef7b9d608",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "7abf731baa8f213a",
+        "type": "ui_group",
+        "name": "Group 4",
+        "tab": "",
+        "order": 4,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "89171f515dc31bf5",
+        "type": "ui_group",
+        "name": "Group 5",
+        "tab": "",
+        "order": 5,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "bb560c61e3573bb5",
+        "type": "ui_group",
+        "name": "Group 6",
+        "tab": "",
+        "order": 6,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "fd1bc0f2c131f545",
+        "type": "ui_group",
+        "name": "Group 7",
+        "tab": "",
+        "order": 7,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "2052814afe03c584",
+        "type": "ui_group",
+        "name": "Group 8",
+        "tab": "",
+        "order": 8,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "83ca3a7801ce73db",
+        "type": "ui_group",
+        "name": "Group 9",
+        "tab": "",
+        "order": 9,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "6b29eecb9b22ca8f",
+        "type": "ui_group",
+        "name": "Group 10",
+        "tab": "",
+        "order": 10,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "028344b515d93549",
+        "type": "ui_group",
+        "name": "Group 11",
+        "tab": "",
+        "order": 11,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "83e85543e512a57b",
+        "type": "ui_group",
+        "name": "Group 12",
+        "tab": "",
+        "order": 12,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "e3d7271dbaf448c8",
+        "type": "ui_group",
+        "name": "Group 13",
+        "tab": "",
+        "order": 13,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "6fa77df07c963bf3",
+        "type": "ui_group",
+        "name": "Group 14",
+        "tab": "",
+        "order": 14,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "456392e36644278e",
+        "type": "ui_group",
+        "name": "Group 15",
+        "tab": "",
+        "order": 15,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "6f4377cc33d4fc46",
+        "type": "ui_group",
+        "name": "Group 16",
+        "tab": "",
+        "order": 16,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "31a18fdff3072a49",
+        "type": "ui_group",
+        "name": "Group 17",
+        "tab": "",
+        "order": 17,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "6b7aab091eb2c341",
+        "type": "ui_group",
+        "name": "Group 18",
+        "tab": "",
+        "order": 18,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "32b44ba21c6a74ec",
+        "type": "ui_group",
+        "name": "Group 19",
+        "tab": "",
+        "order": 19,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "c55102ca5d266982",
+        "type": "ui_group",
+        "name": "Group 20",
+        "tab": "",
+        "order": 20,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "8d3ff5459d3d094c",
+        "type": "ui_group",
+        "name": "Group 21",
+        "tab": "",
+        "order": 21,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "bb346ebf5d649b3e",
+        "type": "ui_group",
+        "name": "Group 22",
+        "tab": "",
+        "order": 22,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "1774ed6239770d31",
+        "type": "ui_group",
+        "name": "Group 23",
+        "tab": "",
+        "order": 23,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "5693adec2f0faf2c",
+        "type": "ui_group",
+        "name": "Group 24",
+        "tab": "",
+        "order": 24,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "cee974871a89eee1",
+        "type": "ui_group",
+        "name": "Group 25",
+        "tab": "",
+        "order": 25,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "1662c248930b6506",
+        "type": "ui_group",
+        "name": "Group 26",
+        "tab": "",
+        "order": 26,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "f9534df32244c864",
+        "type": "ui_group",
+        "name": "Group 27",
+        "tab": "",
+        "order": 27,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "2078a6da02c23e92",
+        "type": "ui_group",
+        "name": "Group 28",
+        "tab": "",
+        "order": 28,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "e5c4f15c5dcab9e1",
+        "type": "ui_group",
+        "name": "Group 29",
+        "tab": "",
+        "order": 29,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "fc5e770d9ea10deb",
+        "type": "ui_group",
+        "name": "Group 30",
+        "tab": "",
+        "order": 30,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "f035c6ab3edc2265",
+        "type": "ui_group",
+        "name": "Group 31",
+        "tab": "",
+        "order": 31,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "ae8efbc5075a6f59",
+        "type": "ui_group",
+        "name": "Group 32",
+        "tab": "",
+        "order": 32,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "bf31f0ba861f2af9",
+        "type": "ui_group",
+        "name": "Group 33",
+        "tab": "",
+        "order": 33,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "b7645708a96965a3",
+        "type": "ui_group",
+        "name": "Group 34",
+        "tab": "",
+        "order": 34,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "6c20bcc6fd21ab00",
+        "type": "ui_group",
+        "name": "Group 35",
+        "tab": "",
+        "order": 35,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "b5da55340645f184",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "36df133dc528d4d4",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "bf54c5c855643007",
+        "type": "inject",
+        "z": "dc9ca215cd90eaad",
+        "name": "Bedroom Auto Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "a59344fd1bf049c5"
+            ]
+        ]
+    },
+    {
+        "id": "a59344fd1bf049c5",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Bedroom Virtual ESP32",
+        "func": "let temperature = Math.floor(Math.random() * (35 - 22 + 1)) + 22;\nlet humidity = Math.floor(Math.random() * (80 - 40 + 1)) + 40;\nlet motion = Math.random() > 0.7 ? \"DETECTED\" : \"NO_MOTION\";\nlet light = Math.floor(Math.random() * (100 - 0 + 1)) + 0;\n\nmsg.topic = \"home/bedroom/telemetry\";\n\nmsg.payload = {\n    device_id: \"bedroom_controller_01\",\n    room: \"bedroom\",\n    temperature: temperature,\n    humidity: humidity,\n    motion: motion,\n    light_level: light\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 80,
+        "wires": [
+            [
+                "3e40469889f42880"
+            ]
+        ]
+    },
+    {
+        "id": "3e40469889f42880",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 610,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6c74c35797ecf870",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/bedroom/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "2f4fdd8dbe801f80",
+                "f07618b1fd15614d"
+            ]
+        ]
+    },
+    {
+        "id": "f07618b1fd15614d",
+        "type": "debug",
+        "z": "dc9ca215cd90eaad",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "036aa3eb25d70c35",
+        "type": "inject",
+        "z": "dc9ca215cd90eaad",
+        "name": "Kitchen Auto Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "fd95560e82aa4517"
+            ]
+        ]
+    },
+    {
+        "id": "fd95560e82aa4517",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Kitchen Virtual ESP32",
+        "func": "let temperature = Math.floor(Math.random() * (45 - 25 + 1)) + 25;\n\nlet gas = Math.random() > 0.85 ? \"GAS_LEAK\" : \"NORMAL\";\n\nlet smoke = Math.random() > 0.90 ? \"SMOKE_DETECTED\" : \"NORMAL\";\n\nmsg.topic = \"home/kitchen/telemetry\";\n\nmsg.payload = {\n    device_id: \"kitchen_controller_01\",\n    room: \"kitchen\",\n    temperature: temperature,\n    gas_status: gas,\n    smoke_status: smoke\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 300,
+        "wires": [
+            [
+                "cf590492258b850b"
+            ]
+        ]
+    },
+    {
+        "id": "cf590492258b850b",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 610,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d2567e5bee4de557",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/kitchen/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "ab6db54fe0481b74",
+                "c51e143693a286ca"
+            ]
+        ]
+    },
+    {
+        "id": "c51e143693a286ca",
+        "type": "debug",
+        "z": "dc9ca215cd90eaad",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "603103c29de72dc5",
+        "type": "inject",
+        "z": "dc9ca215cd90eaad",
+        "name": "Hall Auto Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 540,
+        "wires": [
+            [
+                "7882f373cfcb7b42"
+            ]
+        ]
+    },
+    {
+        "id": "7882f373cfcb7b42",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Hall Virtual ESP32",
+        "func": "let temperature = Math.floor(Math.random() * (34 - 23 + 1)) + 23;\n\nlet motion = Math.random() > 0.6 ? \"DETECTED\" : \"NO_MOTION\";\n\nlet light = Math.floor(Math.random() * (100 - 0 + 1)) + 0;\n\nmsg.topic = \"home/hall/telemetry\";\n\nmsg.payload = {\n    device_id: \"hall_controller_01\",\n    room: \"hall\",\n    temperature: temperature,\n    motion: motion,\n    light_level: light\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 540,
+        "wires": [
+            [
+                "062d8aa3510a782d"
+            ]
+        ]
+    },
+    {
+        "id": "062d8aa3510a782d",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 590,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a3816b7823720457",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/hall/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 600,
+        "wires": [
+            [
+                "d9589cde676f9f93",
+                "96b01c61f6d4f538"
+            ]
+        ]
+    },
+    {
+        "id": "d9589cde676f9f93",
+        "type": "debug",
+        "z": "dc9ca215cd90eaad",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2e050b6c4dd70af9",
+        "type": "inject",
+        "z": "dc9ca215cd90eaad",
+        "name": "Security Auto Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 740,
+        "wires": [
+            [
+                "e91215cab3864d47"
+            ]
+        ]
+    },
+    {
+        "id": "e91215cab3864d47",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Security Virtual ESP32",
+        "func": "let motion = Math.random() > 0.8 ? \"DETECTED\" : \"NO_MOTION\";\n\nlet door_status = Math.random() > 0.9 ? \"OPEN\" : \"CLOSED\";\n\nmsg.topic = \"home/security/telemetry\";\n\nmsg.payload = {\n    device_id: \"security_controller_01\",\n    area: \"main_door\",\n    motion: motion,\n    door_status: door_status\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 740,
+        "wires": [
+            [
+                "9869b1aa5526614c"
+            ]
+        ]
+    },
+    {
+        "id": "9869b1aa5526614c",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 610,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "1baccb04e280a2e5",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/security/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 800,
+        "wires": [
+            [
+                "08ee7bed4990eb53"
+            ]
+        ]
+    },
+    {
+        "id": "08ee7bed4990eb53",
+        "type": "debug",
+        "z": "dc9ca215cd90eaad",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "2f4fdd8dbe801f80",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Bedroom Automation Manager",
+        "func": "let mode = global.get(\"bedroom_mode\") || \"AUTO\";\n\nnode.warn(\"MODE = \" + mode);\n\nif (mode !== \"AUTO\") {\n    return null;\n}\nlet temp = msg.payload.temperature;\nlet motion = msg.payload.motion;\nlet light = msg.payload.light_level;\n\nlet messages = [];\n\n// FAN AUTOMATION\n\nif (temp > 30) {\n    messages.push({\n        topic: \"home/bedroom/fan/set\",\n        payload: \"ON\"\n    });\n}\n\nif (temp < 28) {\n    messages.push({\n        topic: \"home/bedroom/fan/set\",\n        payload: \"OFF\"\n    });\n}\n\n// LIGHT AUTOMATION\n\nif (motion === \"DETECTED\" && light < 40) {\n    messages.push({\n        topic: \"home/bedroom/light/set\",\n        payload: \"ON\"\n    });\n}\n\nif (motion === \"NO_MOTION\") {\n    messages.push({\n        topic: \"home/bedroom/light/set\",\n        payload: \"OFF\"\n    });\n}\n\n// AC AUTOMATION\n\nif (temp > 25) {\n    messages.push({\n        topic: \"home/bedroom/ac/set\",\n        payload: \"ON\"\n    });\n}\n\nif (temp < 20) {\n    messages.push({\n        topic: \"home/bedroom/ac/set\",\n        payload: \"OFF\"\n    });\n}\n\nreturn [messages];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "9054c742ce0d98cc"
+            ]
+        ]
+    },
+    {
+        "id": "9054c742ce0d98cc",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 690,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "96b01c61f6d4f538",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Hall Light Automation",
+        "func": "let mode = global.get(\"hall_mode\") || \"AUTO\";\n\nnode.warn(\"MODE = \" + mode);\n\nif (mode !== \"AUTO\") {\n    return null;\n}\n\nlet motion = msg.payload.motion;\nlet light = msg.payload.light_level;\n\nif(motion === \"DETECTED\" && light < 40){\n\n    msg.topic = \"home/hall/light/set\";\n    msg.payload = \"ON\";\n\n    return msg;\n}\n\nif(motion === \"NO_MOTION\"){\n\n    msg.topic = \"home/hall/light/set\";\n    msg.payload = \"OFF\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 660,
+        "wires": [
+            [
+                "55ca3f8b7cc1f28b"
+            ]
+        ]
+    },
+    {
+        "id": "55ca3f8b7cc1f28b",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 630,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "ab6db54fe0481b74",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Kitchen Automation Manager",
+        "func": "let mode = global.get(\"kitchen_mode\") || \"AUTO\";\n\nif (mode !== \"AUTO\") {\n    return null;\n}\nlet temperature = msg.payload.temperature;\nlet gas = msg.payload.gas_status;\nlet smoke = msg.payload.smoke_status;\n\nlet messages = [];\n\n// 1. Gas leak automation\nif (gas === \"GAS_LEAK\") {\n    messages.push({\n        topic: \"home/kitchen/alarm/set\",\n        payload: \"ON\"\n    });\n}\n\n// 2. Smoke / fire automation\nif (smoke === \"SMOKE_DETECTED\") {\n    messages.push({\n        topic: \"home/kitchen/alarm/set\",\n        payload: \"ON\"\n    });\n}\n\n// 3. High temperature exhaust automation\nif (temperature > 38) {\n    messages.push({\n        topic: \"home/kitchen/exhaust/set\",\n        payload: \"ON\"\n    });\n}\n\nif (temperature < 32 && gas === \"NORMAL\" && smoke === \"NORMAL\") {\n    messages.push({\n        topic: \"home/kitchen/exhaust/set\",\n        payload: \"OFF\"\n    });\n\n    messages.push({\n        topic: \"home/kitchen/alarm/set\",\n        payload: \"OFF\"\n    });\n}\n\nreturn [messages];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 440,
+        "wires": [
+            [
+                "776153929dd665bc"
+            ]
+        ]
+    },
+    {
+        "id": "776153929dd665bc",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 650,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1d592e9e6e8590d9",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/bedroom/+/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 1100,
+        "wires": [
+            [
+                "94d0b527e4b62500"
+            ]
+        ]
+    },
+    {
+        "id": "94d0b527e4b62500",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Bedroom State Manager",
+        "func": "let parts = msg.topic.split(\"/\");\n\nlet room = parts[1];\nlet device = parts[2];\nlet state = msg.payload;\n\nmsg.topic = `home/${room}/${device}/state`;\n\nmsg.payload = {\n    room: room,\n    device: device,\n    state: state\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1100,
+        "wires": [
+            [
+                "884f7bbef7548852"
+            ]
+        ]
+    },
+    {
+        "id": "884f7bbef7548852",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 770,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "560ab3338a2ed5c7",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/bedroom/+/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 400,
+        "y": 1200,
+        "wires": [
+            [
+                "b4e16fc8a69ebd95"
+            ]
+        ]
+    },
+    {
+        "id": "b4e16fc8a69ebd95",
+        "type": "debug",
+        "z": "dc9ca215cd90eaad",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "b3a3ea96595a8e80",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/kitchen/+/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 1340,
+        "wires": [
+            [
+                "8f17d572c8b25bf1"
+            ]
+        ]
+    },
+    {
+        "id": "8f17d572c8b25bf1",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Kitchen State Manager",
+        "func": "let parts = msg.topic.split(\"/\");\n\nlet room = parts[1];\nlet device = parts[2];\nlet state = msg.payload;\n\nmsg.topic = `home/${room}/${device}/state`;\n\nmsg.payload = {\n    room: room,\n    device: device,\n    state: state\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1340,
+        "wires": [
+            [
+                "d9dcfa045ddeb534"
+            ]
+        ]
+    },
+    {
+        "id": "d9dcfa045ddeb534",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 710,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "1aaaf9815033e641",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/kitchen/+/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 390,
+        "y": 1420,
+        "wires": [
+            [
+                "581b2becc6b693fd"
+            ]
+        ]
+    },
+    {
+        "id": "581b2becc6b693fd",
+        "type": "debug",
+        "z": "dc9ca215cd90eaad",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "dc2424f7070f16e6",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/hall/+/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 1580,
+        "wires": [
+            [
+                "99b2505d1cf7f3d2"
+            ]
+        ]
+    },
+    {
+        "id": "99b2505d1cf7f3d2",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Hall State Manager",
+        "func": "let parts = msg.topic.split(\"/\");\n\nlet room = parts[1];\nlet device = parts[2];\nlet state = msg.payload;\n\nmsg.topic = `home/${room}/${device}/state`;\n\nmsg.payload = {\n    room: room,\n    device: device,\n    state: state\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1580,
+        "wires": [
+            [
+                "02133bdd363b20a1"
+            ]
+        ]
+    },
+    {
+        "id": "02133bdd363b20a1",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 690,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "127a7277c57c4e62",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/hall/+/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 1660,
+        "wires": [
+            [
+                "1639d986b189abf4"
+            ]
+        ]
+    },
+    {
+        "id": "1639d986b189abf4",
+        "type": "debug",
+        "z": "dc9ca215cd90eaad",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "1f2386943252fb43",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/security/+/set",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 1840,
+        "wires": [
+            [
+                "28bd6e9110675193"
+            ]
+        ]
+    },
+    {
+        "id": "28bd6e9110675193",
+        "type": "function",
+        "z": "dc9ca215cd90eaad",
+        "name": "Security State Manager",
+        "func": "let parts = msg.topic.split(\"/\");\n\nlet room = parts[1];\nlet device = parts[2];\nlet state = msg.payload;\n\nmsg.topic = `home/${room}/${device}/state`;\n\nmsg.payload = {\n    room: room,\n    device: device,\n    state: state\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1840,
+        "wires": [
+            [
+                "73f9450ac6e3f4bd"
+            ]
+        ]
+    },
+    {
+        "id": "73f9450ac6e3f4bd",
+        "type": "mqtt out",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 750,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "dbd3d13081d1e48d",
+        "type": "mqtt in",
+        "z": "dc9ca215cd90eaad",
+        "name": "",
+        "topic": "home/security/+/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 1940,
+        "wires": [
+            [
+                "888008f1ac94ae6f"
+            ]
+        ]
+    },
+    {
+        "id": "888008f1ac94ae6f",
+        "type": "debug",
+        "z": "dc9ca215cd90eaad",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "c562f1251d7c0ab6",
+        "type": "mqtt in",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "home/bedroom/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "de82492f3a3084e7"
+            ]
+        ]
+    },
+    {
+        "id": "de82492f3a3084e7",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom Temperature Card",
+        "func": "msg.payload = msg.payload.temperature + \" °C\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 200,
+        "wires": [
+            [
+                "94fdb642b35dccce"
+            ]
+        ]
+    },
+    {
+        "id": "94fdb642b35dccce",
+        "type": "ui_text",
+        "z": "f25ea2ab868fd1b0",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1cb0fb15184722de",
+        "type": "ui_text",
+        "z": "f25ea2ab868fd1b0",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidity",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 820,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c24b0c9fca212006",
+        "type": "mqtt in",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "home/bedroom/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 320,
+        "wires": [
+            [
+                "064c2ee0cbdb4f4b"
+            ]
+        ]
+    },
+    {
+        "id": "064c2ee0cbdb4f4b",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom Humidity Card",
+        "func": "msg.payload = msg.payload.humidity + \" %\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 592.2666625976562,
+        "y": 312.26666259765625,
+        "wires": [
+            [
+                "1cb0fb15184722de"
+            ]
+        ]
+    },
+    {
+        "id": "656460440d28fe3e",
+        "type": "mqtt in",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "home/bedroom/fan/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "37be4e5a1e15bf48"
+            ]
+        ]
+    },
+    {
+        "id": "37be4e5a1e15bf48",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom Fan Status",
+        "func": "msg.payload = msg.payload.state;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 420,
+        "wires": [
+            [
+                "8644ccc93222469a"
+            ]
+        ]
+    },
+    {
+        "id": "8644ccc93222469a",
+        "type": "ui_text",
+        "z": "f25ea2ab868fd1b0",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fan",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 783.933349609375,
+        "y": 415.6000061035156,
+        "wires": []
+    },
+    {
+        "id": "4d3ebe07a10186b6",
+        "type": "mqtt in",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "home/bedroom/light/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "c5f3178e33eedd29"
+            ]
+        ]
+    },
+    {
+        "id": "c5f3178e33eedd29",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom Light Status",
+        "func": "msg.payload = msg.payload.state;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 587.2666625976562,
+        "y": 512.2666625976562,
+        "wires": [
+            [
+                "742214c335f8a78f"
+            ]
+        ]
+    },
+    {
+        "id": "742214c335f8a78f",
+        "type": "ui_text",
+        "z": "f25ea2ab868fd1b0",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Light",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 790,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "209fb2870cdfd5a0",
+        "type": "mqtt in",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "home/bedroom/ac/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 620,
+        "wires": [
+            [
+                "2a24a6df9fe30314"
+            ]
+        ]
+    },
+    {
+        "id": "2a24a6df9fe30314",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom AC Status",
+        "func": "msg.payload = msg.payload.state;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 572.2666625976562,
+        "y": 618.933349609375,
+        "wires": [
+            [
+                "d269fb0fc2834152"
+            ]
+        ]
+    },
+    {
+        "id": "d269fb0fc2834152",
+        "type": "ui_text",
+        "z": "f25ea2ab868fd1b0",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AC",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 770,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "4908c923f20e17f4",
+        "type": "ui_switch",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "label": "Fan Control",
+        "tooltip": "",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 800,
+        "wires": [
+            [
+                "f1083901211978fb"
+            ]
+        ]
+    },
+    {
+        "id": "f1083901211978fb",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom Fan Switch Command",
+        "func": "msg.topic = \"home/bedroom/fan/set\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 800,
+        "wires": [
+            [
+                "22ed45c4f90331be"
+            ]
+        ]
+    },
+    {
+        "id": "22ed45c4f90331be",
+        "type": "mqtt out",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 930,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "36cd661507f66f81",
+        "type": "ui_switch",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "label": "Light Control",
+        "tooltip": "",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 900,
+        "wires": [
+            [
+                "a924ec26fe95570d"
+            ]
+        ]
+    },
+    {
+        "id": "a924ec26fe95570d",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom Light Switch Command",
+        "func": "msg.topic = \"home/bedroom/light/set\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 900,
+        "wires": [
+            [
+                "a0794bdc10839c2c"
+            ]
+        ]
+    },
+    {
+        "id": "a0794bdc10839c2c",
+        "type": "mqtt out",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 890,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "69bb9c340ea69191",
+        "type": "ui_switch",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "label": "AC Control",
+        "tooltip": "",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 980,
+        "wires": [
+            [
+                "d852b9446d372dfe"
+            ]
+        ]
+    },
+    {
+        "id": "d852b9446d372dfe",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom AC Switch Command",
+        "func": "msg.topic = \"home/bedroom/ac/set\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 980,
+        "wires": [
+            [
+                "c544df5a4df59ee6"
+            ]
+        ]
+    },
+    {
+        "id": "c544df5a4df59ee6",
+        "type": "mqtt out",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 890,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "39319ccf8ad16a44",
+        "type": "ui_switch",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "label": "Bedroom Auto Mode",
+        "tooltip": "",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "AUTO",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "MANUAL",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 360,
+        "y": 1080,
+        "wires": [
+            [
+                "5394db3da07b2c31"
+            ]
+        ]
+    },
+    {
+        "id": "5394db3da07b2c31",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom Mode Manager",
+        "func": "global.set(\"bedroom_mode\", msg.payload);\n\nmsg.topic = \"home/bedroom/mode/state\";\n\nmsg.payload = {\n    room: \"bedroom\",\n    mode: msg.payload\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1080,
+        "wires": [
+            [
+                "31519fb6009497a5"
+            ]
+        ]
+    },
+    {
+        "id": "31519fb6009497a5",
+        "type": "mqtt out",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 1090,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "b21bd666ccad42af",
+        "type": "mqtt in",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "topic": "home/bedroom/mode/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 1140,
+        "wires": [
+            [
+                "1dbdc7860c3500dc"
+            ]
+        ]
+    },
+    {
+        "id": "1dbdc7860c3500dc",
+        "type": "function",
+        "z": "f25ea2ab868fd1b0",
+        "name": "Bedroom Mode Status",
+        "func": "msg.payload = msg.payload.mode;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1140,
+        "wires": [
+            [
+                "fb076f33c9c31ab7"
+            ]
+        ]
+    },
+    {
+        "id": "fb076f33c9c31ab7",
+        "type": "ui_text",
+        "z": "f25ea2ab868fd1b0",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 910,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "fa7785edc9a730ff",
+        "type": "comment",
+        "z": "f25ea2ab868fd1b0",
+        "name": "",
+        "info": "ye flow hamne aise hi learning ke liye banaya tha taaki flow dikhne me easy lage aur samjh me aa jaye isko baad me jab bhi time mile to kitchen dashboard ka jo flow banaya tha waisa banana hai wo flow hi real world aur sab log banate hain",
+        "x": 1420,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a0c84f3992e17e29",
+        "type": "mqtt in",
+        "z": "052f056e49ec61dc",
+        "name": "",
+        "topic": "home/kitchen/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "6c4d940591481761"
+            ]
+        ]
+    },
+    {
+        "id": "5c5baed55f3fec6a",
+        "type": "ui_text",
+        "z": "052f056e49ec61dc",
+        "group": "bef8ed6281a43985",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 730,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5d59ae2c6370f270",
+        "type": "ui_text",
+        "z": "052f056e49ec61dc",
+        "group": "bef8ed6281a43985",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Gas",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 750,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "49d7f1d9c9b672ac",
+        "type": "ui_text",
+        "z": "052f056e49ec61dc",
+        "group": "bef8ed6281a43985",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Smoke",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 740,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c2e4ea8d94b77514",
+        "type": "ui_text",
+        "z": "052f056e49ec61dc",
+        "group": "bef8ed6281a43985",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Alarm",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 730,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "9a40c62199aac702",
+        "type": "ui_text",
+        "z": "052f056e49ec61dc",
+        "group": "bef8ed6281a43985",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Exhaust",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 740,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ee931952c7d674d3",
+        "type": "ui_switch",
+        "z": "052f056e49ec61dc",
+        "name": "",
+        "label": "Alarm Control",
+        "tooltip": "",
+        "group": "bef8ed6281a43985",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/kitchen/alarm/set",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 380,
+        "y": 600,
+        "wires": [
+            [
+                "fd52310c420b9ef1"
+            ]
+        ]
+    },
+    {
+        "id": "fd52310c420b9ef1",
+        "type": "mqtt out",
+        "z": "052f056e49ec61dc",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 670,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "7ba52e294ff928cd",
+        "type": "ui_switch",
+        "z": "052f056e49ec61dc",
+        "name": "",
+        "label": "Exhaust Control",
+        "tooltip": "",
+        "group": "bef8ed6281a43985",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/kitchen/exhaust/set",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 380,
+        "y": 720,
+        "wires": [
+            [
+                "f8f55c4287ad538a"
+            ]
+        ]
+    },
+    {
+        "id": "f8f55c4287ad538a",
+        "type": "mqtt out",
+        "z": "052f056e49ec61dc",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 670,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "23c777b2f91dd9b2",
+        "type": "ui_switch",
+        "z": "052f056e49ec61dc",
+        "name": "",
+        "label": "Kitchen Auto Mode",
+        "tooltip": "",
+        "group": "bef8ed6281a43985",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "AUTO",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "MANUAL",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 900,
+        "wires": [
+            [
+                "66d822d52f277033"
+            ]
+        ]
+    },
+    {
+        "id": "66d822d52f277033",
+        "type": "function",
+        "z": "052f056e49ec61dc",
+        "name": "Kitchen Mode Manager",
+        "func": "global.set(\"kitchen_mode\", msg.payload);\n\nmsg.topic = \"home/kitchen/mode/state\";\n\nmsg.payload = {\n    room: \"kitchen\",\n    mode: msg.payload\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 900,
+        "wires": [
+            [
+                "3a7083f397b03f2c"
+            ]
+        ]
+    },
+    {
+        "id": "3a7083f397b03f2c",
+        "type": "mqtt out",
+        "z": "052f056e49ec61dc",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 810,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "93243ed0cf5b242a",
+        "type": "mqtt in",
+        "z": "052f056e49ec61dc",
+        "name": "",
+        "topic": "home/kitchen/mode/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 390,
+        "y": 1020,
+        "wires": [
+            [
+                "c03f892142090d2d"
+            ]
+        ]
+    },
+    {
+        "id": "c03f892142090d2d",
+        "type": "function",
+        "z": "052f056e49ec61dc",
+        "name": "Kitchen Mode Status",
+        "func": "msg.payload = msg.payload.mode;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1020,
+        "wires": [
+            [
+                "d2ebd2e7102cdc31"
+            ]
+        ]
+    },
+    {
+        "id": "d2ebd2e7102cdc31",
+        "type": "ui_text",
+        "z": "052f056e49ec61dc",
+        "group": "bef8ed6281a43985",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 890,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "6c4d940591481761",
+        "type": "function",
+        "z": "052f056e49ec61dc",
+        "name": "Kitchen Data Parser",
+        "func": "return [\n{\n    payload: msg.payload.temperature + \" °C\"\n},\n\n{\n    payload: msg.payload.gas_status\n},\n\n{\n    payload: msg.payload.smoke_status\n}\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 140,
+        "wires": [
+            [
+                "5c5baed55f3fec6a"
+            ],
+            [
+                "5d59ae2c6370f270"
+            ],
+            [
+                "49d7f1d9c9b672ac"
+            ]
+        ]
+    },
+    {
+        "id": "ab940bbd9d30f340",
+        "type": "mqtt in",
+        "z": "052f056e49ec61dc",
+        "name": "",
+        "topic": "home/kitchen/+/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 400,
+        "wires": [
+            [
+                "ab849515bf2a5f64"
+            ]
+        ]
+    },
+    {
+        "id": "ab849515bf2a5f64",
+        "type": "function",
+        "z": "052f056e49ec61dc",
+        "name": "Kitchen State Parser",
+        "func": "let device = msg.payload.device;\nlet state = msg.payload.state;\n\nif (device === \"alarm\") {\n    return [\n        { payload: state },\n        null\n    ];\n}\n\nif (device === \"exhaust\") {\n    return [\n        null,\n        { payload: state }\n    ];\n}\n\nreturn [null, null];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 400,
+        "wires": [
+            [
+                "c2e4ea8d94b77514"
+            ],
+            [
+                "9a40c62199aac702"
+            ]
+        ]
+    },
+    {
+        "id": "d206947c4516b4e9",
+        "type": "comment",
+        "z": "052f056e49ec61dc",
+        "name": "Kitchen Dashboard",
+        "info": "",
+        "x": 170,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c8f150fb368837c6",
+        "type": "mqtt in",
+        "z": "897a62519bd486fd",
+        "name": "",
+        "topic": "home/hall/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "08fb9de3c3899d1b"
+            ]
+        ]
+    },
+    {
+        "id": "08fb9de3c3899d1b",
+        "type": "function",
+        "z": "897a62519bd486fd",
+        "name": "Hall Data Parser",
+        "func": "return [\n    { payload: msg.payload.motion },\n    { payload: msg.payload.light_level }\n];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 100,
+        "wires": [
+            [
+                "4418e929e6baa8f5"
+            ],
+            [
+                "05028a470140c3be"
+            ]
+        ]
+    },
+    {
+        "id": "4418e929e6baa8f5",
+        "type": "ui_text",
+        "z": "897a62519bd486fd",
+        "group": "1204efa4cd24bd46",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Motion",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 750,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "05028a470140c3be",
+        "type": "ui_text",
+        "z": "897a62519bd486fd",
+        "group": "1204efa4cd24bd46",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Light Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 770,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "5b8347344db755c0",
+        "type": "mqtt in",
+        "z": "897a62519bd486fd",
+        "name": "",
+        "topic": "home/hall/+/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "a446689fc83bfb75"
+            ]
+        ]
+    },
+    {
+        "id": "a446689fc83bfb75",
+        "type": "function",
+        "z": "897a62519bd486fd",
+        "name": "Hall State Parser",
+        "func": "return [\n    { payload: msg.payload.state }\n];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 320,
+        "wires": [
+            [
+                "f45f52d006329ca4"
+            ]
+        ]
+    },
+    {
+        "id": "c06147d7cd644055",
+        "type": "ui_switch",
+        "z": "897a62519bd486fd",
+        "name": "",
+        "label": "Hall Auto Mode",
+        "tooltip": "",
+        "group": "1204efa4cd24bd46",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "AUTO",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "MANUAL",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 360,
+        "y": 500,
+        "wires": [
+            [
+                "9ea46bf98c5a8039"
+            ]
+        ]
+    },
+    {
+        "id": "9ea46bf98c5a8039",
+        "type": "function",
+        "z": "897a62519bd486fd",
+        "name": "Hall Mode Manager",
+        "func": "global.set(\"hall_mode\", msg.payload);\n\nmsg.topic = \"home/hall/mode/state\";\n\nmsg.payload = {\n    room: \"hall\",\n    mode: msg.payload\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 500,
+        "wires": [
+            [
+                "0bbf9873f76cabe9"
+            ]
+        ]
+    },
+    {
+        "id": "0bbf9873f76cabe9",
+        "type": "mqtt out",
+        "z": "897a62519bd486fd",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 910,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d40d4e78283c976e",
+        "type": "mqtt in",
+        "z": "897a62519bd486fd",
+        "name": "",
+        "topic": "home/hall/mode/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 420,
+        "y": 600,
+        "wires": [
+            [
+                "077ec6f178495b19"
+            ]
+        ]
+    },
+    {
+        "id": "077ec6f178495b19",
+        "type": "function",
+        "z": "897a62519bd486fd",
+        "name": "home/hall/mode/state",
+        "func": "msg.payload = msg.payload.mode;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 600,
+        "wires": [
+            [
+                "df354c80e3aeeabc"
+            ]
+        ]
+    },
+    {
+        "id": "df354c80e3aeeabc",
+        "type": "ui_text",
+        "z": "897a62519bd486fd",
+        "group": "1204efa4cd24bd46",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f45f52d006329ca4",
+        "type": "ui_text",
+        "z": "897a62519bd486fd",
+        "group": "1204efa4cd24bd46",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Light",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 870,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "615105609cb2817b",
+        "type": "ui_switch",
+        "z": "897a62519bd486fd",
+        "name": "",
+        "label": "Hall Light Control",
+        "tooltip": "",
+        "group": "1204efa4cd24bd46",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/hall/light/set",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "7ef1a1a94bf06515"
+            ]
+        ]
+    },
+    {
+        "id": "7ef1a1a94bf06515",
+        "type": "mqtt out",
+        "z": "897a62519bd486fd",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f24e34ff43a1830",
+        "x": 590,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "af92d71360af6772",
+        "type": "ui_chart",
+        "z": "85a0b1348ef627ca",
+        "name": "",
+        "group": "fc9ea856ccc2fa3a",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "label": "Bedroom Temperature Trend",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1160,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "57f55e3d56b1bb65",
+        "type": "mqtt in",
+        "z": "85a0b1348ef627ca",
+        "name": "",
+        "topic": "home/bedroom/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "d672f7760ff21851"
+            ]
+        ]
+    },
+    {
+        "id": "d672f7760ff21851",
+        "type": "function",
+        "z": "85a0b1348ef627ca",
+        "name": "Bedroom Temperature Chart Data",
+        "func": "msg.payload = msg.payload.temperature;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 260,
+        "wires": [
+            [
+                "af92d71360af6772"
+            ]
+        ]
+    },
+    {
+        "id": "3536bee5695d03fa",
+        "type": "ui_chart",
+        "z": "85a0b1348ef627ca",
+        "name": "",
+        "group": "bef8ed6281a43985",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "label": "Kitchen Temperature Trend",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "60",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1140,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bc2fa4c54580b45",
+        "type": "mqtt in",
+        "z": "85a0b1348ef627ca",
+        "name": "",
+        "topic": "home/kitchen/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5f24e34ff43a1830",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "9a9d99b9274d2406"
+            ]
+        ]
+    },
+    {
+        "id": "9a9d99b9274d2406",
+        "type": "function",
+        "z": "85a0b1348ef627ca",
+        "name": "Kitchen Temperature Chart Data",
+        "func": "msg.payload = msg.payload.temperature;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "3536bee5695d03fa"
+            ]
+        ]
+    },
+    {
+        "id": "cacb357880ae3255",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
