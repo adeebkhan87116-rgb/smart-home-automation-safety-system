@@ -91,6 +91,22 @@ home/{room}/mode/state
 
 ---
 
+## Architecture
+
+### High Level Architecture
+
+![High Level Architecture](architecture/high-level-architecture.png)
+
+
+
+
+
+
+
+### Detailed Architecture
+
+![Detailed Architecture](architecture/detailed-architecture.png)
+
 ## Author
 
 Adeeb Khan
